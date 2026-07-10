@@ -1,0 +1,32 @@
+﻿# FAST-Calib2 Python configuration template.
+# Copy this file before tuning parameters for your own sensor and target.
+
+camera:
+  fx: 0.0
+  fy: 0.0
+  cx: 0.0
+  cy: 0.0
+  distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
+
+board:
+  marker_size: 0.20
+  delta_width_qr_center: 0.55
+  delta_height_qr_center: 0.35
+  delta_width_circles: 0.50
+  delta_height_circles: 0.40
+  circle_radius: 0.12
+  annulus_half_width: 0.025
+  marker_ids: [1, 2, 4, 3]
+  aruco_dictionary: DICT_6X6_250
+
+lidar:
+  topic: /livox/lidar
+  x_min: 0.8
+  x_max: 4.5
+  intensity_threshold: 80.0
+  cluster_tolerance: 0.20
+  cluster_min_size: 30
+  plane_ransac_threshold: 0.03
+  plane_near_threshold: 0.04
+  grid_step: 0.02
+  rectangle_tolerance: 0.08

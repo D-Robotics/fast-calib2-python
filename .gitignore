@@ -1,0 +1,33 @@
+﻿# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environments and local configuration
+.venv/
+venv/
+.env
+config/calibration.yaml
+
+# Acquisition data and generated calibration artifacts
+calib_data/
+data/
+datasets/
+output/
+outputs/
+results/
+*.bag
+*.pcd
+*.npy
+*.npz
+*.bmp
+*.png
+*.jpg
+*.jpeg
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
