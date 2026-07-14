@@ -1,6 +1,6 @@
 ﻿# FAST-Calib2 Python
 
-A Python reference implementation of the [FAST-Calib2][https://github.com/hku-mars/FAST-Calib2] workflow for LiDAR-camera extrinsic calibration with a reflective annular target.
+A Python reference implementation of the [FAST-Calib2](https://github.com/xuankuzcr/FAST-Calib2] workflow for LiDAR-camera extrinsic calibration with a reflective annular target.
 
 It estimates `T_cam_lidar` by:
 
