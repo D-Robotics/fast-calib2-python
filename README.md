@@ -1,4 +1,4 @@
-﻿# FAST-Calib2 Python
+# FAST-Calib2 Python
 
 A Python reference implementation of the [FAST-Calib2](https://github.com/xuankuzcr/FAST-Calib2) workflow for LiDAR-camera extrinsic calibration with a reflective annular target.
 
@@ -34,7 +34,7 @@ requirements.txt
 Install Python dependencies:
 
 ```bash
-python3 -m pip install -r requirements.txt
+python3 -m pip install .[dev]
 ```
 
 For bag-based point-cloud input, source your ROS1 environment before invoking the script:
@@ -43,6 +43,23 @@ For bag-based point-cloud input, source your ROS1 environment before invoking th
 source /opt/ros/noetic/setup.bash
 ```
 
+
+## Engineering workflow
+
+The calibration workflow is available both as an installed command and through the legacy script:
+
+```bash
+fast-calib2 validate-config --config config/calibration.yaml
+fast-calib2 calibrate --config config/calibration.yaml --scenes /path/to/scenes --out output
+# Backwards-compatible:
+python3 scripts/calibrate_lidar_camera.py --config config/calibration.yaml --scenes /path/to/scenes --out output
+```
+
+Run algorithm and input-format regression tests with:
+
+```bash
+python3 -m pytest
+```
 ## Configuration
 
 Create a private configuration file from the template:

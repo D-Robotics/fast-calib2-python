@@ -1,4 +1,4 @@
-﻿# Python bytecode and tool caches
+# Python bytecode and tool caches
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -31,3 +31,7 @@ results/
 .idea/
 .DS_Store
 Thumbs.db
+# Python packaging artifacts
+build/
+dist/
+*.egg-info/

@@ -1,10 +1,10 @@
-﻿[build-system]
+[build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "fast-calib2-python"
-version = "0.1.0"
+version = "0.2.0"
 description = "Python reference implementation for FAST-Calib2 LiDAR-camera calibration"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -16,9 +16,19 @@ dependencies = [
   "PyYAML>=6.0",
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+fast-calib2 = "fast_calib2.cli:main"
+
 [project.urls]
 Homepage = "https://github.com/D-Robotics/fast-calib2-python"
 Repository = "https://github.com/D-Robotics/fast-calib2-python"
 
-[tool.setuptools]
-py-modules = []
+[tool.setuptools.packages.find]
+include = ["fast_calib2*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
